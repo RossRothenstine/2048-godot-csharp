@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqjc2mc2ncv17"]
+
+[ext_resource type="Script" path="res://Scenes/TileBackground.cs" id="1_2ljy3"]
+
+[node name="Polygon2D" type="Polygon2D"]
+color = Color(0.8, 0.666667, 0.533333, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+script = ExtResource("1_2ljy3")

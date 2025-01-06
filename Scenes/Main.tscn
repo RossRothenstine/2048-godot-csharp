@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://e1e2ugopwobi"]
+
+[ext_resource type="Script" path="res://Scenes/Main.cs" id="1_xxj2c"]
+[ext_resource type="PackedScene" uid="uid://csymg01rxbs08" path="res://Scenes/Grid.tscn" id="2_6ph54"]
+[ext_resource type="PackedScene" uid="uid://dgp0n4r0m77r5" path="res://Scenes/UI.tscn" id="3_pn4bj"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_xxj2c")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.286275, 0.333333, 0.423529, 1)
+polygon = PackedVector2Array(0, 0, 1152, 0, 1152, 648, 0, 648)
+
+[node name="Grid" parent="." instance=ExtResource("2_6ph54")]
+unique_name_in_owner = true
+position = Vector2(346, 94)
+
+[node name="UI" parent="." instance=ExtResource("3_pn4bj")]
+unique_name_in_owner = true

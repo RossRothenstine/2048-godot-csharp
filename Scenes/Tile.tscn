@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5hi78c2gy55x"]
+
+[ext_resource type="Script" path="res://Scenes/Tile.cs" id="1_0fh0p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y154t"]
+font_size = 32
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0fh0p")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.866667, 0.8, 0.733333, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 100, 0, 100)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "2
+"
+label_settings = SubResource("LabelSettings_y154t")
+horizontal_alignment = 1
+vertical_alignment = 1

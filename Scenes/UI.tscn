@@ -1,0 +1,99 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgp0n4r0m77r5"]
+
+[ext_resource type="Script" path="res://Scenes/UI.cs" id="1_j72xf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bx0n8"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j72xf")
+
+[node name="ScorePanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_right = 61.0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScorePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScorePanel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScorePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScorePanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "SCORE:"
+
+[node name="ScoreLabel" type="Label" parent="ScorePanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="HSeparator" type="HSeparator" parent="ScorePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScorePanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ScorePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "MOVES: "
+
+[node name="MovesLabel" type="Label" parent="ScorePanel/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0
+"
+
+[node name="GameOverPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_bx0n8")
+
+[node name="GameOverDialog" type="PanelContainer" parent="GameOverPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="GameOverPanel/GameOverDialog"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverPanel/GameOverDialog/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="GameOverPanel/GameOverDialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER!"
+
+[node name="HSeparator" type="HSeparator" parent="GameOverPanel/GameOverDialog/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TryAgainButton" type="Button" parent="GameOverPanel/GameOverDialog/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Try Again?"

@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://csymg01rxbs08"]
+
+[ext_resource type="Script" path="res://Scenes/Grid.cs" id="1_0rcfy"]
+[ext_resource type="PackedScene" uid="uid://cqjc2mc2ncv17" path="res://Scenes/TileBackground.tscn" id="1_o35f3"]
+
+[node name="Grid" type="Node2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_0rcfy")
+
+[node name="GridBackground" type="Polygon2D" parent="."]
+color = Color(0.599346, 0.50351, 0.405498, 1)
+polygon = PackedVector2Array(0, 0, 475, 0, 475, 475, 0, 475)
+
+[node name="RowContainer" type="Node2D" parent="GridBackground"]
+position = Vector2(15, 15)
+
+[node name="Polygon2D" parent="GridBackground/RowContainer" instance=ExtResource("1_o35f3")]
+
+[node name="Polygon2D2" parent="GridBackground/RowContainer" instance=ExtResource("1_o35f3")]
+position = Vector2(115, 0)
+
+[node name="Polygon2D3" parent="GridBackground/RowContainer" instance=ExtResource("1_o35f3")]
+position = Vector2(230, 0)
+
+[node name="Polygon2D4" parent="GridBackground/RowContainer" instance=ExtResource("1_o35f3")]
+position = Vector2(345, 0)
+
+[node name="RowContainer2" type="Node2D" parent="GridBackground"]
+position = Vector2(15, 130)
+
+[node name="Polygon2D" parent="GridBackground/RowContainer2" instance=ExtResource("1_o35f3")]
+
+[node name="Polygon2D2" parent="GridBackground/RowContainer2" instance=ExtResource("1_o35f3")]
+position = Vector2(115, 0)
+
+[node name="Polygon2D3" parent="GridBackground/RowContainer2" instance=ExtResource("1_o35f3")]
+position = Vector2(230, 0)
+
+[node name="Polygon2D4" parent="GridBackground/RowContainer2" instance=ExtResource("1_o35f3")]
+position = Vector2(345, 0)
+
+[node name="RowContainer3" type="Node2D" parent="GridBackground"]
+position = Vector2(15, 245)
+
+[node name="Polygon2D" parent="GridBackground/RowContainer3" instance=ExtResource("1_o35f3")]
+
+[node name="Polygon2D2" parent="GridBackground/RowContainer3" instance=ExtResource("1_o35f3")]
+position = Vector2(115, 0)
+
+[node name="Polygon2D3" parent="GridBackground/RowContainer3" instance=ExtResource("1_o35f3")]
+position = Vector2(230, 0)
+
+[node name="Polygon2D4" parent="GridBackground/RowContainer3" instance=ExtResource("1_o35f3")]
+position = Vector2(345, 0)
+
+[node name="RowContainer4" type="Node2D" parent="GridBackground"]
+position = Vector2(15, 360)
+
+[node name="Polygon2D" parent="GridBackground/RowContainer4" instance=ExtResource("1_o35f3")]
+
+[node name="Polygon2D2" parent="GridBackground/RowContainer4" instance=ExtResource("1_o35f3")]
+position = Vector2(115, 0)
+
+[node name="Polygon2D3" parent="GridBackground/RowContainer4" instance=ExtResource("1_o35f3")]
+position = Vector2(230, 0)
+
+[node name="Polygon2D4" parent="GridBackground/RowContainer4" instance=ExtResource("1_o35f3")]
+position = Vector2(345, 0)
