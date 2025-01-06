@@ -1,4 +1,5 @@
 using Godot;
+using Microsoft.VisualBasic;
 using System;
 
 public partial class UI : Control
@@ -32,6 +33,9 @@ public partial class UI : Control
     {
         var tryAgainButton = GetNode<Button>("%TryAgainButton");
         tryAgainButton.Connect(BaseButton.SignalName.Pressed, Callable.From(OnTryAgainButtonPressed));
+
+        var mobileSwipeControl = GetNode<Control>("%MobileSwipeReceiver");
+        mobileSwipeControl.Visible = OS.GetName() == "iOS" || OS.GetName() == "Android";
     }
 
     private void OnTryAgainButtonPressed()

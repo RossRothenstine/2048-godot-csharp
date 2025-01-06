@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgp0n4r0m77r5"]
+[gd_scene load_steps=4 format=3 uid="uid://dgp0n4r0m77r5"]
 
 [ext_resource type="Script" path="res://Scenes/UI.cs" id="1_j72xf"]
+[ext_resource type="Script" path="res://Scenes/MobileSwipeReceiver.cs" id="2_h8p62"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bx0n8"]
 
@@ -59,6 +60,21 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "0
 "
+
+[node name="MobileSwipeReceiver" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_h8p62")
+upAction = &"move_up"
+downAction = &"move_down"
+rightAction = &"move_right"
+leftAction = &"move_left"
 
 [node name="GameOverPanel" type="PanelContainer" parent="."]
 unique_name_in_owner = true
